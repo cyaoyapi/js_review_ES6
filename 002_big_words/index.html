@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Big words</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/*This display words with size geater than 5 characters among
+			5 given words by the user.
+			*/
+			words = [];
+			big_words = [];
+			for(let i = 1; i <= 5; i++){
+				words[i] = prompt(`Entrez le mot numéro ${i} : `);
+				if(words[i].length >= 10){
+					big_words.push(words[i]);
+				}
+			}
+			if(big_words.length > 0){
+				alert(`Big words with 10 characters at least : \n${big_words.join(" ; ")}`);
+			}else{
+				alert("There are no given words with size greater than 10 characters");
+			}
+
+		</script>
+	</body>
+</html>
