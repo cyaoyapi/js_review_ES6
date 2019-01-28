@@ -18,7 +18,6 @@ let women = [
 ];
 
 presentation = (people) => `${people.name}, ${people.age} old, earns ${people.salary}$ a yaer`;
-
 console.log("===Program starts ===");
 console.log("List of men : ");
 men.forEach(man => console.log(presentation(man)));
@@ -26,4 +25,25 @@ console.log("List of women : ");
 for(let woman of women){ 
 	console.log(presentation(woman));
 }
+console.log("===Add 2 new men :===");
+men.push({name:"Bernard ZAKORI", age:37, salary:6542800.500});
+men.unshift({name:"Donald YORO", age:58, salary:1934600.000});
+men[men.length] = {name:"Marcelin YAO", age:40, salary:28671071.001};
+console.log("New list of men : ");
+men.forEach(function(man){console.log(presentation(man));});
+console.log("===List of ages of women in ascending order : ===");
+let ages = [];
+ages = women.map(woman => woman.age);
+ages.sort()
+for(age of ages){
+	console.log(age);
+}
+console.log("===List of men with salary greater than 2000000 : ===");
+let richMen = [];
+richMen = men.filter(man => man.salary >= 2000000);
+richMen.forEach(man => console.log(`${man.name} : ${man.salary}`));
+console.log("===Total wealth of women : ===");
+let women_wealth = women.reduce((cumulator, woman) => cumulator + woman.salary, 0);
+console.log(women_wealth + "$");
+
 
