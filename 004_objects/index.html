@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Peoples modelisation with objects</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/*Modelisation with objects in javascript.
+			*/
+			
+			const people = {};
+			people.name = prompt("Your whole name : ");
+			people.age = prompt("Your age : ")
+			people.job = prompt("Your Job : ")
+			people.presentation = function(){
+				alert(`Hello ${people.name}. You're ${people.age} old and you are ${people.job}`);
+			}
+			people.presentation();
+
+		</script>
+	</body>
+</html>
