@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Strings handling</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/*Tests with Strings' methods.
+			*/
+			
+			let given_string = prompt("Enter a word : ");
+			alert(`You entered the word : ${given_string}`);
+			alert(`${given_string} contains ${given_string.length} character(s)`);
+			alert(`The forth character is : ${given_string[3]}`)
+			alert(`${given_string} in uppercase : ${given_string.toLowerCase()} and in lowercase : ${given_string.toUpperCase()}`);
+			given_string_letters = Array.from(given_string);
+			alert(`${given_string} is composed of : ${given_string_letters.join("  -  ")}`);
+			let sub_string_searched = prompt("Enter the searched string : ");
+			if(given_string.indexOf(sub_string_searched) !== -1){
+				alert(`${sub_string_searched} is in ${given_string}`);
+			}else{
+				alert(`${sub_string_searched} is not in ${given_string}`);
+			}
+			if(given_string.toUpperCase().startsWith(prompt("Teh given word starts with ? ").toUpperCase())){
+				alert("Yes");
+			}else{
+				alert("No");
+			}
+
+		</script>
+	</body>
+</html>
