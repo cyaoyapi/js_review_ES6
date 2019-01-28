@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Usuals functions</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/*Tests with functions in moderne javascript :
+				- Fibonacci : using explicit declaration of function.
+				- Factorial : using function expression.
+				- Square : using flat function.
+				- Double : using short flat function.
+			*/
+			
+			function fibonacciFunc(n){
+				series = [];
+				let a = 0, b = 1;
+				while(a <= n){
+					series.push(a);
+					c = a;
+					a = b;
+					b = c + b;
+				}
+				return series.join("  "); 
+			}
+
+			let factorialFunc = function(n){
+				if(n === 0){
+					return 1;
+				}else{
+					return n * factorialFunc(n-1);
+				} 
+			};
+
+			let squareFunc = (n) => {
+				return Math.pow(n, 2) ;
+			};
+
+			let doubleFunc = (n) => 2 * n;
+
+			givenNumber = parseInt(prompt("Your number : "), 10);
+			alert(`Fibonacci series until ${givenNumber} :  ${fibonacciFunc(givenNumber)}`);
+			alert(`Facorial of ${givenNumber} : ${factorialFunc(givenNumber)}`);
+			alert(`Square of ${givenNumber} : ${squareFunc(givenNumber)}`);
+			alert(`Double of ${givenNumber} : ${doubleFunc(givenNumber)}`);
+
+		</script>
+	</body>
+</html>
