@@ -20,6 +20,5 @@ clic1.addEventListener('click', function(event){
 
 clic2.addEventListener('click', event => {
 	sideEffectsManager(event);
-	event.stopPropagation();
 	alert("I repeat again : Clic me !");
 })
