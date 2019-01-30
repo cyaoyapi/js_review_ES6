@@ -14,7 +14,7 @@ btn_callback.addEventListener('click', function(e){
 
 }, false);
 
-// Asynchronus : Using callback promises
+// Asynchronus : Using promises
 let btn_promise = document.getElementById("btn_promise");
 btn_promise.addEventListener('click', function(e){
 	sideEffectsManager(e);
@@ -31,5 +31,26 @@ btn_promise.addEventListener('click', function(e){
     })
     .catch(() => alert("Promise Error!"))
     .then(() => alert("All is good!"))
+
+}, false);
+
+
+// Asynchronus : Using async and await
+
+let btn_async_await = document.getElementById("btn_async_await");
+btn_async_await.addEventListener('click', function(e){
+	sideEffectsManager(e);
+	async function randomValue(){
+		return Math.floor((Math.random() * 100));
+	}
+
+	async function calculate(){
+		let number1 = await randomValue();
+		let number2 = await randomValue();
+		alert(`${number1} + ${number2} = ${number1 + number2}`);
+	}
+
+	calculate();
+	
 
 }, false);
