@@ -16,5 +16,9 @@
     "npm"
   ],
   "author": "Cyrille YAO",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
 }
