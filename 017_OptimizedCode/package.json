@@ -1,0 +1,20 @@
+{
+  "name": "optimized-code",
+  "version": "1.0.0",
+  "description": "An example of optimized code in modern Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "ES6",
+    "EMAScript",
+    "2015",
+    "Webpack",
+    "Nodejs",
+    "npm"
+  ],
+  "author": "Cyrille YAO",
+  "license": "ISC"
+}
