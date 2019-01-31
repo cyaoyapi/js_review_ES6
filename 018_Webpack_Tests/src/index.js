@@ -1,3 +1,11 @@
-import mySchool from './school.js';
+import randomValue from './random.js';
 
-console.log(`My school name is : ${mySchool}`);
+async function sayHello(){
+	let counter = await randomValue();
+	console.log(`Selected number : ${counter}`);
+	for(let i = 1; i <= counter; i++){
+		console.log(`{i} time(s) => Hello`);
+	}
+}
+
+sayHello();
